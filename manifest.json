@@ -1,0 +1,30 @@
+{
+  "name": "TexTageでランダムガチャの配置を確認するやつ",
+  "version": "0.0.1",
+  "manifest_version": 2,
+  "description": "Textageの譜面ページ表示時に任意の配置を適用するボタンを表示します",
+  "author": "@fusisan",
+  "icons": {
+    "16": "images/16.png",
+    "48": "images/48.png",
+    "128": "images/128.png"
+  },
+  "content_scripts": [
+    {
+      "run_at": "document_end",
+      "matches": [
+        "https://textage.cc/score/*/*.html?1*",
+        "https://textage.cc/score/*/*.html?2*"
+      ],
+      "js": ["script.js"]
+    }
+  ],
+  "browser_action": {
+    "default_icon": {
+      "16": "images/16.png"
+    },
+    "default_title": "適用する配置を設定する",
+    "default_popup": "popup/options.html"
+  },
+  "permissions": ["storage"]
+}
