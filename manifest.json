@@ -15,7 +15,8 @@
       "matches": [
         "https://textage.cc/score/*/*.html?1*",
         "https://textage.cc/score/*/*.html?2*",
-        "https://textage.cc/score/*/*.html?D*"
+        "https://textage.cc/score/*/*.html?D*",
+        "https://textage.cc/score/*/*.html?F*"
       ],
       "js": ["script.js", "checkPattern.js"]
     }

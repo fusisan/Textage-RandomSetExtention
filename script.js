@@ -40,7 +40,7 @@ function createPatternButton(array, side) {
 
 function checkDP() {
   var originalUrl = window.location.href;
-  return originalUrl.charAt(originalUrl.lastIndexOf("?") + 1) == "D";
+  return originalUrl.charAt(originalUrl.lastIndexOf("?") + 1).match(/[DF]/);
 }
 
 function getRandomUrl(side, pattern) {
