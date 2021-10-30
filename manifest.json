@@ -1,6 +1,6 @@
 {
   "name": "TexTageでランダムガチャの配置を確認するやつ",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "manifest_version": 2,
   "description": "Textageの譜面ページ表示時に任意の配置を適用するボタンを表示します",
   "author": "@fusisan",
@@ -14,9 +14,10 @@
       "run_at": "document_end",
       "matches": [
         "https://textage.cc/score/*/*.html?1*",
-        "https://textage.cc/score/*/*.html?2*"
+        "https://textage.cc/score/*/*.html?2*",
+        "https://textage.cc/score/*/*.html?D*"
       ],
-      "js": ["script.js"]
+      "js": ["script.js", "checkPattern.js"]
     }
   ],
   "browser_action": {

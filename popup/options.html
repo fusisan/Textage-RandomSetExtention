@@ -1,23 +1,25 @@
 <!DOCTYPE html>
 <html lang="default">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-</head>
-
-<body>
-  <div>
-    <p1>配置を入力(最大10件)</p1>
-    <br>
-    <p1>(複数の場合は改行)</p1>
-    <br>
-    <textarea id="input_random_pattern" rows="10" cols="20" maxlength="79" wrap="OFF"></textarea>
-    <br>
-    <button id="save_button">配置を保存</button>
-  </div>
-  <script src="options.js"></script>
-</body>
-
+  <body>
+    <div>
+      <p1>配置を入力(最大20件)</p1>
+      <br />
+      <p1>(複数の場合は改行)</p1>
+      <br />
+      <!-- maxlengthの値を修正する事で配置の最大保存件数を変更出来ます。
+      値は(保存したい件数*8)-1を設定して下さい。(例:10件→79,20件→159,30件→239)
+      rowsの値を修正すると表示できる行数が変更されます。-->
+      <textarea id="input_random_pattern" rows="20" cols="20" maxlength="159" wrap="OFF"></textarea>
+      <br />
+      <button id="save_button">配置を保存</button>
+    </div>
+    <script src="options.js"></script>
+    <script src="../checkPattern.js"></script>
+  </body>
 </html>
