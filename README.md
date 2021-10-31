@@ -44,6 +44,9 @@ beatmania IIDX 29 CastHour でランダムレーンチケット機能が追加�
 
 ## 更新履歴
 
+### v0.0.3 2021-10-30
+- DPのFLIP適用時に動作するように修正 (@ravelll PullRequest thx!)
+
 ### v0.0.2 2021-10-29
 
 - DP に対応
