@@ -53,7 +53,7 @@ function getRandomUrl(side, pattern) {
     if (side == 1) {
       newQuery = query.substr(0, 6) + "R0" + pattern + DEFAULT_PATTERN + query.substr(6);
     } else {
-      query.substr(0, 6) + "R" + DEFAULT_PATTERN + "0" + pattern + query.substr(6);
+      newQuery = query.substr(0, 6) + "R" + DEFAULT_PATTERN + "0" + pattern + query.substr(6);
     }
   } else {
     if (side == 1) {
