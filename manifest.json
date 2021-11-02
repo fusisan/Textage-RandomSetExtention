@@ -1,6 +1,6 @@
 {
   "name": "TexTageでランダムガチャの配置を確認するやつ",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "manifest_version": 2,
   "description": "Textageの譜面ページ表示時に任意の配置を適用するボタンを表示します",
   "author": "@fusisan",
