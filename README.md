@@ -1,5 +1,7 @@
 # TexTageでランダムガチャの配置を確認するやつ
 
+スマホでも使えるBookmarklet版が出来ました→ [Textage-RandomSetBookmarklet](https://fusisan.github.io/TexTage-RandomSetBookmarklet/)
+
 ## 概要
 
 beatmania IIDX 29 CastHour でランダムレーンチケット機能が追加されました。
