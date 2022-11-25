@@ -22,7 +22,21 @@ window.onload = function () {
       }
     }
   });
+  setRandomPatternText();
 };
+
+function setRandomPatternText() {
+  var originalUrl = window.location.href;
+  var query = originalUrl.substring(originalUrl.lastIndexOf("?"));
+  var spRan = query.substring(8, 15);
+  var dpRan1P = spRan;
+  var dpRan2P = query.substring(16, 23);
+
+  document.body.outerHTML = document.body.outerHTML
+    .replace("+RANDOM", "+RANDOM[" + spRan + "]")
+    .replace("+1P RAN", "+1P RAN[" + dpRan1P + "]")
+    .replace("+2P RAN", "+2P RAN[" + dpRan2P + "]");
+}
 
 function createPatternButton(array, side) {
   array.forEach((element) => {
@@ -45,21 +59,21 @@ function checkDP() {
 
 function getRandomUrl(side, pattern) {
   var originalUrl = window.location.href;
-  var url = originalUrl.substr(0, originalUrl.lastIndexOf("?"));
-  var query = originalUrl.substr(originalUrl.lastIndexOf("?"));
+  var url = originalUrl.substring(0, originalUrl.lastIndexOf("?"));
+  var query = originalUrl.substring(originalUrl.lastIndexOf("?"));
   var newQuery;
 
   if (query.indexOf("R") == -1) {
     if (side == 1) {
-      newQuery = query.substr(0, 6) + "R0" + pattern + DEFAULT_PATTERN + query.substr(6);
+      newQuery = query.substring(0, 6) + "R0" + pattern + DEFAULT_PATTERN + query.substring(6);
     } else {
-      newQuery = query.substr(0, 6) + "R" + DEFAULT_PATTERN + "0" + pattern + query.substr(6);
+      newQuery = query.substring(0, 6) + "R" + DEFAULT_PATTERN + "0" + pattern + query.substring(6);
     }
   } else {
     if (side == 1) {
-      newQuery = query.substr(0, 6) + "R0" + pattern + query.substr(15);
+      newQuery = query.substring(0, 6) + "R0" + pattern + query.substring(15);
     } else {
-      newQuery = query.substr(0, 15) + "0" + pattern + query.substr(23);
+      newQuery = query.substring(0, 15) + "0" + pattern + query.substring(23);
     }
   }
   console.log(newQuery);

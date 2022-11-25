@@ -8,15 +8,14 @@
 
   <body>
     <div>
-      <p1>配置を入力(最大20件)</p1>
+      <p1>配置を入力</p1>
       <br />
       <p1>(複数の場合は改行)</p1>
       <br />
-      <!-- maxlengthの値を修正する事で配置の最大保存件数を変更出来ます。
-      値は(保存したい件数*8)-1を設定して下さい。(例:10件→79,20件→159,30件→239)
-      rowsの値を修正すると表示できる行数が変更されます。-->
-      <textarea id="input_random_pattern" rows="20" cols="20" maxlength="159" wrap="OFF"></textarea>
+      <!-- rowsの値を修正すると表示できる行数が変更されます。-->
+      <textarea id="input_random_pattern" rows="20" cols="20" wrap="OFF"></textarea>
       <br />
+      <button id="import_ticket_button">チケットから読込</button>
       <button id="save_button">配置を保存</button>
     </div>
     <script src="options.js"></script>
